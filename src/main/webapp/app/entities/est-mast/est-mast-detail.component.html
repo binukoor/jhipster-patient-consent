@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="estMast">
+            <h2><span jhiTranslate="patientConsentApp.estMast.detail.title">Est Mast</span> {{estMast.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="patientConsentApp.estMast.estCode">Est Code</span></dt>
+                <dd>
+                    <span>{{estMast.estCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.estMast.estName">Est Name</span></dt>
+                <dd>
+                    <span>{{estMast.estName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/est-mast', estMast.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

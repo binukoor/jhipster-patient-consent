@@ -1,0 +1,105 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="patientConsentApp.consent.home.title">Consents</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-consent" [routerLink]="['/consent/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="patientConsentApp.consent.home.createLabel">
+            Create a new Consent
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="consents?.length === 0">
+        <span jhiTranslate="patientConsentApp.consent.home.notFound">No consents found</span>
+    </div>
+    <div class="table-responsive" *ngIf="consents?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.consentId">Consent Id</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.description">Description</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.indicationBenefits">Indication Benefits</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.complications">Complications</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.alternatives">Alternatives</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.patient">Patient</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.visit">Visit</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.institute">Institute</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.status">Status</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.category">Category</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.scope">Scope</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.consent.createdBy">Created By</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let consent of consents ;trackBy: trackId">
+                <td><a [routerLink]="['/consent', consent.id, 'view' ]">{{consent.id}}</a></td>
+                <td>{{consent.consentId}}</td>
+                <td>{{consent.description}}</td>
+                <td>{{consent.indicationBenefits}}</td>
+                <td>{{consent.complications}}</td>
+                <td>{{consent.alternatives}}</td>
+                <td>
+                    <div *ngIf="consent.patient">
+                        <a [routerLink]="['/patient-bar', consent.patient?.id, 'view' ]" >{{consent.patient?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="consent.visit">
+                        <a [routerLink]="['/visit-bar', consent.visit?.id, 'view' ]" >{{consent.visit?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="consent.institute">
+                        <a [routerLink]="['/est-mast', consent.institute?.id, 'view' ]" >{{consent.institute?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="consent.status">
+                        <a [routerLink]="['/status-mast', consent.status?.id, 'view' ]" >{{consent.status?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="consent.category">
+                        <a [routerLink]="['/category-mast', consent.category?.id, 'view' ]" >{{consent.category?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="consent.scope">
+                        <a [routerLink]="['/scope-mast', consent.scope?.id, 'view' ]" >{{consent.scope?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="consent.createdBy">
+                        <a [routerLink]="['/person-mast', consent.createdBy?.id, 'view' ]" >{{consent.createdBy?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/consent', consent.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/consent', consent.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(consent)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

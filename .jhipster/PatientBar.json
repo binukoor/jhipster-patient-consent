@@ -1,0 +1,36 @@
+{
+    "name": "PatientBar",
+    "fields": [
+        {
+            "fieldName": "patientId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "patientNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "patientName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191129111714",
+    "entityTableName": "patient_bar",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

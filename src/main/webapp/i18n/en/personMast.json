@@ -1,0 +1,23 @@
+{
+  "patientConsentApp": {
+    "personMast": {
+      "home": {
+        "title": "Person Masts",
+        "createLabel": "Create a new Person Mast",
+        "createOrEditLabel": "Create or edit a Person Mast",
+        "notFound": "No Person Masts found"
+      },
+      "created": "A new Person Mast is created with identifier {{ param }}",
+      "updated": "A Person Mast is updated with identifier {{ param }}",
+      "deleted": "A Person Mast is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Person Mast {{ id }}?"
+      },
+      "detail": {
+        "title": "Person Mast"
+      },
+      "persCode": "Pers Code",
+      "personName": "Person Name"
+    }
+  }
+}

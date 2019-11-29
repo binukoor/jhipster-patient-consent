@@ -1,0 +1,114 @@
+{
+    "name": "Consent",
+    "fields": [
+        {
+            "fieldName": "consentId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "indicationBenefits",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "complications",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alternatives",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "patientBar",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "patient",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "visitBar",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "visit",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "estMast",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "institute",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "statusMast",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "status",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "categoryMast",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "category",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "scopeMast",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "scope",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "personMast",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "createdBy",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "consentProcs",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "procs"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "consentDiag",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "diag"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "consentFrom",
+            "otherEntityRelationshipName": "consent",
+            "relationshipName": "verifiers"
+        }
+    ],
+    "changelogDate": "20191129111716",
+    "entityTableName": "consent",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

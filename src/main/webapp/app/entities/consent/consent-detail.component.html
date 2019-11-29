@@ -1,0 +1,85 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="consent">
+            <h2><span jhiTranslate="patientConsentApp.consent.detail.title">Consent</span> {{consent.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="patientConsentApp.consent.consentId">Consent Id</span></dt>
+                <dd>
+                    <span>{{consent.consentId}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.description">Description</span></dt>
+                <dd>
+                    <span>{{consent.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.indicationBenefits">Indication Benefits</span></dt>
+                <dd>
+                    <span>{{consent.indicationBenefits}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.complications">Complications</span></dt>
+                <dd>
+                    <span>{{consent.complications}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.alternatives">Alternatives</span></dt>
+                <dd>
+                    <span>{{consent.alternatives}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.patient">Patient</span></dt>
+                <dd>
+                    <div *ngIf="consent.patient">
+                        <a [routerLink]="['/patient-bar', consent.patient?.id, 'view']">{{consent.patient?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.visit">Visit</span></dt>
+                <dd>
+                    <div *ngIf="consent.visit">
+                        <a [routerLink]="['/visit-bar', consent.visit?.id, 'view']">{{consent.visit?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.institute">Institute</span></dt>
+                <dd>
+                    <div *ngIf="consent.institute">
+                        <a [routerLink]="['/est-mast', consent.institute?.id, 'view']">{{consent.institute?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.status">Status</span></dt>
+                <dd>
+                    <div *ngIf="consent.status">
+                        <a [routerLink]="['/status-mast', consent.status?.id, 'view']">{{consent.status?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.category">Category</span></dt>
+                <dd>
+                    <div *ngIf="consent.category">
+                        <a [routerLink]="['/category-mast', consent.category?.id, 'view']">{{consent.category?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.scope">Scope</span></dt>
+                <dd>
+                    <div *ngIf="consent.scope">
+                        <a [routerLink]="['/scope-mast', consent.scope?.id, 'view']">{{consent.scope?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consent.createdBy">Created By</span></dt>
+                <dd>
+                    <div *ngIf="consent.createdBy">
+                        <a [routerLink]="['/person-mast', consent.createdBy?.id, 'view']">{{consent.createdBy?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/consent', consent.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{
+  "patientConsentApp": {
+    "consent": {
+      "home": {
+        "title": "Consents",
+        "createLabel": "Create a new Consent",
+        "createOrEditLabel": "Create or edit a Consent",
+        "notFound": "No Consents found"
+      },
+      "created": "A new Consent is created with identifier {{ param }}",
+      "updated": "A Consent is updated with identifier {{ param }}",
+      "deleted": "A Consent is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Consent {{ id }}?"
+      },
+      "detail": {
+        "title": "Consent"
+      },
+      "consentId": "Consent Id",
+      "description": "Description",
+      "indicationBenefits": "Indication Benefits",
+      "complications": "Complications",
+      "alternatives": "Alternatives",
+      "patient": "Patient",
+      "visit": "Visit",
+      "institute": "Institute",
+      "status": "Status",
+      "category": "Category",
+      "scope": "Scope",
+      "createdBy": "Created By",
+      "procs": "Procs",
+      "diag": "Diag",
+      "verifiers": "Verifiers"
+    }
+  }
+}

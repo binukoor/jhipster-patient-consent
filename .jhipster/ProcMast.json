@@ -1,0 +1,24 @@
+{
+    "name": "ProcMast",
+    "fields": [
+        {
+            "fieldName": "procCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "procName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191129111710",
+    "entityTableName": "proc_mast",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

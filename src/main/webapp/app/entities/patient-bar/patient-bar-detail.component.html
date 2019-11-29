@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="patientBar">
+            <h2><span jhiTranslate="patientConsentApp.patientBar.detail.title">Patient Bar</span> {{patientBar.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="patientConsentApp.patientBar.patientId">Patient Id</span></dt>
+                <dd>
+                    <span>{{patientBar.patientId}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.patientBar.patientNo">Patient No</span></dt>
+                <dd>
+                    <span>{{patientBar.patientNo}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.patientBar.patientName">Patient Name</span></dt>
+                <dd>
+                    <span>{{patientBar.patientName}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.patientBar.age">Age</span></dt>
+                <dd>
+                    <span>{{patientBar.age}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.patientBar.gender">Gender</span></dt>
+                <dd>
+                    <span>{{patientBar.gender}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/patient-bar', patientBar.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{
+    "name": "ConsentProcs",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "procMast",
+            "otherEntityRelationshipName": "consentProcs",
+            "relationshipName": "procCode",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "consent",
+            "otherEntityRelationshipName": "procs",
+            "relationshipName": "consent",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129111717",
+    "entityTableName": "consent_procs",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

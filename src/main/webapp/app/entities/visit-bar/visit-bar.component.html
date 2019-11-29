@@ -1,0 +1,73 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="patientConsentApp.visitBar.home.title">Visit Bars</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-visit-bar" [routerLink]="['/visit-bar/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="patientConsentApp.visitBar.home.createLabel">
+            Create a new Visit Bar
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="visitBars?.length === 0">
+        <span jhiTranslate="patientConsentApp.visitBar.home.notFound">No visitBars found</span>
+    </div>
+    <div class="table-responsive" *ngIf="visitBars?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.visitId">Visit Id</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.visitType">Visit Type</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.visitTime">Visit Time</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.seenTime">Seen Time</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.deptCode">Dept Code</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.deptName">Dept Name</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.clinicCode">Clinic Code</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.clinicName">Clinic Name</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.consultantCode">Consultant Code</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.visitBar.consultantName">Consultant Name</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let visitBar of visitBars ;trackBy: trackId">
+                <td><a [routerLink]="['/visit-bar', visitBar.id, 'view' ]">{{visitBar.id}}</a></td>
+                <td>{{visitBar.visitId}}</td>
+                <td>{{visitBar.visitType}}</td>
+                <td>{{visitBar.visitTime | date:'medium'}}</td>
+                <td>{{visitBar.seenTime | date:'medium'}}</td>
+                <td>{{visitBar.deptCode}}</td>
+                <td>{{visitBar.deptName}}</td>
+                <td>{{visitBar.clinicCode}}</td>
+                <td>{{visitBar.clinicName}}</td>
+                <td>{{visitBar.consultantCode}}</td>
+                <td>{{visitBar.consultantName}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/visit-bar', visitBar.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/visit-bar', visitBar.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(visitBar)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

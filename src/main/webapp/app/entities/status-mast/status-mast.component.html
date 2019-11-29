@@ -1,0 +1,57 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="patientConsentApp.statusMast.home.title">Status Masts</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-status-mast" [routerLink]="['/status-mast/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="patientConsentApp.statusMast.home.createLabel">
+            Create a new Status Mast
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="statusMasts?.length === 0">
+        <span jhiTranslate="patientConsentApp.statusMast.home.notFound">No statusMasts found</span>
+    </div>
+    <div class="table-responsive" *ngIf="statusMasts?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.statusMast.statusCode">Status Code</span></th>
+            <th scope="col" ><span jhiTranslate="patientConsentApp.statusMast.status">Status</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let statusMast of statusMasts ;trackBy: trackId">
+                <td><a [routerLink]="['/status-mast', statusMast.id, 'view' ]">{{statusMast.id}}</a></td>
+                <td>{{statusMast.statusCode}}</td>
+                <td>{{statusMast.status}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/status-mast', statusMast.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/status-mast', statusMast.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(statusMast)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

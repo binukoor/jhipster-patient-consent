@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity ConsentProcs.
+    -->
+    <changeSet id="20191129111717-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="proc_code_id"
+                                 baseTableName="consent_procs"
+                                 constraintName="fk_consent_procs_proc_code_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="proc_mast"/>
+
+        <addForeignKeyConstraint baseColumnNames="consent_id"
+                                 baseTableName="consent_procs"
+                                 constraintName="fk_consent_procs_consent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="consent"/>
+
+    </changeSet>
+</databaseChangeLog>

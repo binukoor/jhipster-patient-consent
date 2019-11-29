@@ -1,0 +1,23 @@
+{
+  "patientConsentApp": {
+    "procMast": {
+      "home": {
+        "title": "Proc Masts",
+        "createLabel": "Create a new Proc Mast",
+        "createOrEditLabel": "Create or edit a Proc Mast",
+        "notFound": "No Proc Masts found"
+      },
+      "created": "A new Proc Mast is created with identifier {{ param }}",
+      "updated": "A Proc Mast is updated with identifier {{ param }}",
+      "deleted": "A Proc Mast is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Proc Mast {{ id }}?"
+      },
+      "detail": {
+        "title": "Proc Mast"
+      },
+      "procCode": "Proc Code",
+      "procName": "Proc Name"
+    }
+  }
+}

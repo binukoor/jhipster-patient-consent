@@ -1,0 +1,26 @@
+{
+  "patientConsentApp": {
+    "patientBar": {
+      "home": {
+        "title": "Patient Bars",
+        "createLabel": "Create a new Patient Bar",
+        "createOrEditLabel": "Create or edit a Patient Bar",
+        "notFound": "No Patient Bars found"
+      },
+      "created": "A new Patient Bar is created with identifier {{ param }}",
+      "updated": "A Patient Bar is updated with identifier {{ param }}",
+      "deleted": "A Patient Bar is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Patient Bar {{ id }}?"
+      },
+      "detail": {
+        "title": "Patient Bar"
+      },
+      "patientId": "Patient Id",
+      "patientNo": "Patient No",
+      "patientName": "Patient Name",
+      "age": "Age",
+      "gender": "Gender"
+    }
+  }
+}

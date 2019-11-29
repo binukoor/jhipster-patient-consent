@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="consentDiag">
+            <h2><span jhiTranslate="patientConsentApp.consentDiag.detail.title">Consent Diag</span> {{consentDiag.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="patientConsentApp.consentDiag.description">Description</span></dt>
+                <dd>
+                    <span>{{consentDiag.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consentDiag.icd">Icd</span></dt>
+                <dd>
+                    <div *ngIf="consentDiag.icd">
+                        <a [routerLink]="['/icd-mast', consentDiag.icd?.id, 'view']">{{consentDiag.icd?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consentDiag.consent">Consent</span></dt>
+                <dd>
+                    <div *ngIf="consentDiag.consent">
+                        <a [routerLink]="['/consent', consentDiag.consent?.id, 'view']">{{consentDiag.consent?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/consent-diag', consentDiag.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

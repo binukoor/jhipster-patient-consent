@@ -1,0 +1,36 @@
+{
+    "name": "ConsentDiag",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "icdMast",
+            "otherEntityRelationshipName": "consentDiag",
+            "relationshipName": "icd",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "consent",
+            "otherEntityRelationshipName": "diag",
+            "relationshipName": "consent",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129111718",
+    "entityTableName": "consent_diag",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,24 @@
+{
+    "name": "CategoryMast",
+    "fields": [
+        {
+            "fieldName": "catCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "category",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191129111709",
+    "entityTableName": "category_mast",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
