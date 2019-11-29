@@ -1,0 +1,107 @@
+
+entity StatusMast {
+	statusCode Integer,
+    status String
+}
+entity ScopeMast {
+	scopeCode Integer,
+    scope String
+}
+entity CategoryMast {
+	catCode Integer,
+    category String
+}
+entity ProcMast {
+	procCode Integer,
+    procName String
+}
+entity IcdMast{
+	icd	String,
+    disease String
+}
+entity PersonMast{
+	persCode Integer,
+    personName String
+}
+entity EstMast{
+	estCode	Integer,
+    estName	String
+}
+
+entity PatientBar {
+	patientId Long,
+    patientNo String,
+	patientName String,
+    age	String,
+    gender String
+}
+
+entity VisitBar {
+	visitId	Long
+    visitType String,
+    visitTime Instant,
+    seenTime Instant,
+    deptCode Integer,
+    deptName String,
+    clinicCode Integer,
+    clinicName String,
+    consultantCode Integer,
+    consultantName String
+}
+
+entity Consent {
+	consentId Long required,
+	description String,
+    indicationBenefits String,
+    complications String,
+    alternatives String
+}
+entity ConsentProc {
+	description String
+}
+entity ConsentDiag {
+    description String
+}
+entity ConsentVerifiers {
+	isVerified Boolean,
+    verifiedBy String required,
+    verifiedTime Instant
+}
+relationship OneToOne {
+	Consent{patient} to PatientBar
+}
+relationship OneToOne {
+	Consent{visit} to VisitBar
+}
+relationship OneToOne {
+	ConsentProcs{procedure} to ProcMast
+}
+relationship OneToOne {
+	ConsentDiag{icd} to IcdMast
+}
+relationship OneToMany {
+	Consent{procs} to ConsentProc
+}
+relationship OneToMany {
+	Consent{diag} to ConsentDiag
+}
+relationship OneToOne {
+	Consent{institute} to EstMast
+}
+relationship OneToOne {
+	Consent{status} to StatusMast
+}
+
+relationship OneToOne {
+	Consent{category} to CategoryMast
+}
+relationship OneToOne {
+	Consent{scope} to ScopeMast
+}
+relationship OneToOne {
+	Consent{createdBy} to PersonMast
+}
+relationship OneToMany {
+	Consent{verifiers} to ConsentVerifiers
+}
+
