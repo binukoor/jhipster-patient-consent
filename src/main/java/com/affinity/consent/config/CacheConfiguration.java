@@ -42,6 +42,22 @@ public class CacheConfiguration {
             createCache(cm, com.affinity.consent.domain.User.class.getName());
             createCache(cm, com.affinity.consent.domain.Authority.class.getName());
             createCache(cm, com.affinity.consent.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.affinity.consent.domain.StatusMast.class.getName());
+            createCache(cm, com.affinity.consent.domain.ScopeMast.class.getName());
+            createCache(cm, com.affinity.consent.domain.CategoryMast.class.getName());
+            createCache(cm, com.affinity.consent.domain.ProcMast.class.getName());
+            createCache(cm, com.affinity.consent.domain.IcdMast.class.getName());
+            createCache(cm, com.affinity.consent.domain.PersonMast.class.getName());
+            createCache(cm, com.affinity.consent.domain.EstMast.class.getName());
+            createCache(cm, com.affinity.consent.domain.PatientBar.class.getName());
+            createCache(cm, com.affinity.consent.domain.VisitBar.class.getName());
+            createCache(cm, com.affinity.consent.domain.Consent.class.getName());
+            createCache(cm, com.affinity.consent.domain.Consent.class.getName() + ".procs");
+            createCache(cm, com.affinity.consent.domain.Consent.class.getName() + ".diags");
+            createCache(cm, com.affinity.consent.domain.Consent.class.getName() + ".verifiers");
+            createCache(cm, com.affinity.consent.domain.ConsentProcs.class.getName());
+            createCache(cm, com.affinity.consent.domain.ConsentDiag.class.getName());
+            createCache(cm, com.affinity.consent.domain.ConsentFrom.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

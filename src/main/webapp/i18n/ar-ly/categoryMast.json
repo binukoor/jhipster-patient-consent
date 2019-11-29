@@ -1,0 +1,23 @@
+{
+  "patientConsentApp": {
+    "categoryMast": {
+      "home": {
+        "title": "Category Masts",
+        "createLabel": "Create a new Category Mast",
+        "createOrEditLabel": "Create or edit a Category Mast",
+        "notFound": "No Category Masts found"
+      },
+      "created": "A new Category Mast is created with identifier {{ param }}",
+      "updated": "A Category Mast is updated with identifier {{ param }}",
+      "deleted": "A Category Mast is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Category Mast {{ id }}?"
+      },
+      "detail": {
+        "title": "Category Mast"
+      },
+      "catCode": "Cat Code",
+      "category": "Category"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity ConsentDiag.
+    -->
+    <changeSet id="20191129111718-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="icd_id"
+                                 baseTableName="consent_diag"
+                                 constraintName="fk_consent_diag_icd_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="icd_mast"/>
+
+        <addForeignKeyConstraint baseColumnNames="consent_id"
+                                 baseTableName="consent_diag"
+                                 constraintName="fk_consent_diag_consent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="consent"/>
+
+    </changeSet>
+</databaseChangeLog>

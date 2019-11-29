@@ -1,0 +1,56 @@
+{
+    "name": "VisitBar",
+    "fields": [
+        {
+            "fieldName": "visitId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "visitType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "visitTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "seenTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "deptCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "deptName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "clinicCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "clinicName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "consultantCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "consultantName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191129111715",
+    "entityTableName": "visit_bar",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

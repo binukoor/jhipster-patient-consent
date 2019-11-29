@@ -1,0 +1,24 @@
+{
+    "name": "IcdMast",
+    "fields": [
+        {
+            "fieldName": "icd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "disease",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191129111711",
+    "entityTableName": "icd_mast",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

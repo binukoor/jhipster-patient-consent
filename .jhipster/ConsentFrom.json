@@ -1,0 +1,39 @@
+{
+    "name": "ConsentFrom",
+    "fields": [
+        {
+            "fieldName": "isVerified",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "verifiedBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "verifiedTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "consent",
+            "otherEntityRelationshipName": "verifiers",
+            "relationshipName": "consent",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129111719",
+    "entityTableName": "consent_from",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

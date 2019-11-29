@@ -14,6 +14,23 @@
     <property name="uuidType" value="uuid" dbms="h2, oracle"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111707_added_entity_StatusMast.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111708_added_entity_ScopeMast.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111709_added_entity_CategoryMast.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111710_added_entity_ProcMast.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111711_added_entity_IcdMast.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111712_added_entity_PersonMast.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111713_added_entity_EstMast.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111714_added_entity_PatientBar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111715_added_entity_VisitBar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111716_added_entity_Consent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111717_added_entity_ConsentProcs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111718_added_entity_ConsentDiag.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111719_added_entity_ConsentFrom.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20191129111716_added_entity_constraints_Consent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111717_added_entity_constraints_ConsentProcs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111718_added_entity_constraints_ConsentDiag.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191129111719_added_entity_constraints_ConsentFrom.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

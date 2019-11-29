@@ -1,0 +1,23 @@
+{
+  "patientConsentApp": {
+    "scopeMast": {
+      "home": {
+        "title": "Scope Masts",
+        "createLabel": "Create a new Scope Mast",
+        "createOrEditLabel": "Create or edit a Scope Mast",
+        "notFound": "No Scope Masts found"
+      },
+      "created": "A new Scope Mast is created with identifier {{ param }}",
+      "updated": "A Scope Mast is updated with identifier {{ param }}",
+      "deleted": "A Scope Mast is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Scope Mast {{ id }}?"
+      },
+      "detail": {
+        "title": "Scope Mast"
+      },
+      "scopeCode": "Scope Code",
+      "scope": "Scope"
+    }
+  }
+}

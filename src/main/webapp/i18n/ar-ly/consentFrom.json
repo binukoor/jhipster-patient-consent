@@ -1,0 +1,25 @@
+{
+  "patientConsentApp": {
+    "consentFrom": {
+      "home": {
+        "title": "Consent Froms",
+        "createLabel": "Create a new Consent From",
+        "createOrEditLabel": "Create or edit a Consent From",
+        "notFound": "No Consent Froms found"
+      },
+      "created": "A new Consent From is created with identifier {{ param }}",
+      "updated": "A Consent From is updated with identifier {{ param }}",
+      "deleted": "A Consent From is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Consent From {{ id }}?"
+      },
+      "detail": {
+        "title": "Consent From"
+      },
+      "isVerified": "Is Verified",
+      "verifiedBy": "Verified By",
+      "verifiedTime": "Verified Time",
+      "consent": "Consent"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="consentProcs">
+            <h2><span jhiTranslate="patientConsentApp.consentProcs.detail.title">Consent Procs</span> {{consentProcs.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="patientConsentApp.consentProcs.description">Description</span></dt>
+                <dd>
+                    <span>{{consentProcs.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consentProcs.procCode">Proc Code</span></dt>
+                <dd>
+                    <div *ngIf="consentProcs.procCode">
+                        <a [routerLink]="['/proc-mast', consentProcs.procCode?.id, 'view']">{{consentProcs.procCode?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.consentProcs.consent">Consent</span></dt>
+                <dd>
+                    <div *ngIf="consentProcs.consent">
+                        <a [routerLink]="['/consent', consentProcs.consent?.id, 'view']">{{consentProcs.consent?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/consent-procs', consentProcs.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{
+  "patientConsentApp": {
+    "visitBar": {
+      "home": {
+        "title": "Visit Bars",
+        "createLabel": "Create a new Visit Bar",
+        "createOrEditLabel": "Create or edit a Visit Bar",
+        "notFound": "No Visit Bars found"
+      },
+      "created": "A new Visit Bar is created with identifier {{ param }}",
+      "updated": "A Visit Bar is updated with identifier {{ param }}",
+      "deleted": "A Visit Bar is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Visit Bar {{ id }}?"
+      },
+      "detail": {
+        "title": "Visit Bar"
+      },
+      "visitId": "Visit Id",
+      "visitType": "Visit Type",
+      "visitTime": "Visit Time",
+      "seenTime": "Seen Time",
+      "deptCode": "Dept Code",
+      "deptName": "Dept Name",
+      "clinicCode": "Clinic Code",
+      "clinicName": "Clinic Name",
+      "consultantCode": "Consultant Code",
+      "consultantName": "Consultant Name"
+    }
+  }
+}

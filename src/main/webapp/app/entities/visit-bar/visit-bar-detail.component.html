@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="visitBar">
+            <h2><span jhiTranslate="patientConsentApp.visitBar.detail.title">Visit Bar</span> {{visitBar.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="patientConsentApp.visitBar.visitId">Visit Id</span></dt>
+                <dd>
+                    <span>{{visitBar.visitId}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.visitType">Visit Type</span></dt>
+                <dd>
+                    <span>{{visitBar.visitType}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.visitTime">Visit Time</span></dt>
+                <dd>
+                    <span>{{visitBar.visitTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.seenTime">Seen Time</span></dt>
+                <dd>
+                    <span>{{visitBar.seenTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.deptCode">Dept Code</span></dt>
+                <dd>
+                    <span>{{visitBar.deptCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.deptName">Dept Name</span></dt>
+                <dd>
+                    <span>{{visitBar.deptName}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.clinicCode">Clinic Code</span></dt>
+                <dd>
+                    <span>{{visitBar.clinicCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.clinicName">Clinic Name</span></dt>
+                <dd>
+                    <span>{{visitBar.clinicName}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.consultantCode">Consultant Code</span></dt>
+                <dd>
+                    <span>{{visitBar.consultantCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="patientConsentApp.visitBar.consultantName">Consultant Name</span></dt>
+                <dd>
+                    <span>{{visitBar.consultantName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/visit-bar', visitBar.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

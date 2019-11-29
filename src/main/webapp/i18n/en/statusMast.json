@@ -1,0 +1,23 @@
+{
+  "patientConsentApp": {
+    "statusMast": {
+      "home": {
+        "title": "Status Masts",
+        "createLabel": "Create a new Status Mast",
+        "createOrEditLabel": "Create or edit a Status Mast",
+        "notFound": "No Status Masts found"
+      },
+      "created": "A new Status Mast is created with identifier {{ param }}",
+      "updated": "A Status Mast is updated with identifier {{ param }}",
+      "deleted": "A Status Mast is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Status Mast {{ id }}?"
+      },
+      "detail": {
+        "title": "Status Mast"
+      },
+      "statusCode": "Status Code",
+      "status": "Status"
+    }
+  }
+}

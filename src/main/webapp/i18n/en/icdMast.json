@@ -1,0 +1,23 @@
+{
+  "patientConsentApp": {
+    "icdMast": {
+      "home": {
+        "title": "Icd Masts",
+        "createLabel": "Create a new Icd Mast",
+        "createOrEditLabel": "Create or edit a Icd Mast",
+        "notFound": "No Icd Masts found"
+      },
+      "created": "A new Icd Mast is created with identifier {{ param }}",
+      "updated": "A Icd Mast is updated with identifier {{ param }}",
+      "deleted": "A Icd Mast is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Icd Mast {{ id }}?"
+      },
+      "detail": {
+        "title": "Icd Mast"
+      },
+      "icd": "Icd",
+      "disease": "Disease"
+    }
+  }
+}

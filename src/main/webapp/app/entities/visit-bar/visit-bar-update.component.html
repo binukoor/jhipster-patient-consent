@@ -1,0 +1,76 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-visit-bar-heading" jhiTranslate="patientConsentApp.visitBar.home.createOrEditLabel">Create or edit a Visit Bar</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.visitId" for="field_visitId">Visit Id</label>
+                    <input type="number" class="form-control" name="visitId" id="field_visitId"
+                           formControlName="visitId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.visitType" for="field_visitType">Visit Type</label>
+                    <input type="text" class="form-control" name="visitType" id="field_visitType"
+                           formControlName="visitType"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.visitTime" for="field_visitTime">Visit Time</label>
+                    <div class="d-flex">
+                        <input id="field_visitTime" type="datetime-local" class="form-control" name="visitTime" formControlName="visitTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.seenTime" for="field_seenTime">Seen Time</label>
+                    <div class="d-flex">
+                        <input id="field_seenTime" type="datetime-local" class="form-control" name="seenTime" formControlName="seenTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.deptCode" for="field_deptCode">Dept Code</label>
+                    <input type="number" class="form-control" name="deptCode" id="field_deptCode"
+                           formControlName="deptCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.deptName" for="field_deptName">Dept Name</label>
+                    <input type="text" class="form-control" name="deptName" id="field_deptName"
+                           formControlName="deptName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.clinicCode" for="field_clinicCode">Clinic Code</label>
+                    <input type="number" class="form-control" name="clinicCode" id="field_clinicCode"
+                           formControlName="clinicCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.clinicName" for="field_clinicName">Clinic Name</label>
+                    <input type="text" class="form-control" name="clinicName" id="field_clinicName"
+                           formControlName="clinicName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.consultantCode" for="field_consultantCode">Consultant Code</label>
+                    <input type="number" class="form-control" name="consultantCode" id="field_consultantCode"
+                           formControlName="consultantCode"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.visitBar.consultantName" for="field_consultantName">Consultant Name</label>
+                    <input type="text" class="form-control" name="consultantName" id="field_consultantName"
+                           formControlName="consultantName"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

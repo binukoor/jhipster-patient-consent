@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Consent.
+    -->
+    <changeSet id="20191129111716-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="patient_id"
+                                 baseTableName="consent"
+                                 constraintName="fk_consent_patient_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient_bar"/>
+
+        <addForeignKeyConstraint baseColumnNames="visit_id"
+                                 baseTableName="consent"
+                                 constraintName="fk_consent_visit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="visit_bar"/>
+
+        <addForeignKeyConstraint baseColumnNames="institute_id"
+                                 baseTableName="consent"
+                                 constraintName="fk_consent_institute_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="est_mast"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="consent"
+                                 constraintName="fk_consent_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="status_mast"/>
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="consent"
+                                 constraintName="fk_consent_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category_mast"/>
+
+        <addForeignKeyConstraint baseColumnNames="scope_id"
+                                 baseTableName="consent"
+                                 constraintName="fk_consent_scope_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scope_mast"/>
+
+        <addForeignKeyConstraint baseColumnNames="created_by_id"
+                                 baseTableName="consent"
+                                 constraintName="fk_consent_created_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person_mast"/>
+
+    </changeSet>
+</databaseChangeLog>

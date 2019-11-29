@@ -1,0 +1,24 @@
+{
+  "patientConsentApp": {
+    "consentProcs": {
+      "home": {
+        "title": "Consent Procs",
+        "createLabel": "Create a new Consent Procs",
+        "createOrEditLabel": "Create or edit a Consent Procs",
+        "notFound": "No Consent Procs found"
+      },
+      "created": "A new Consent Procs is created with identifier {{ param }}",
+      "updated": "A Consent Procs is updated with identifier {{ param }}",
+      "deleted": "A Consent Procs is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Consent Procs {{ id }}?"
+      },
+      "detail": {
+        "title": "Consent Procs"
+      },
+      "description": "Description",
+      "procCode": "Proc Code",
+      "consent": "Consent"
+    }
+  }
+}

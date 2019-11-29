@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-consent-from-heading" jhiTranslate="patientConsentApp.consentFrom.home.createOrEditLabel">Create or edit a Consent From</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.consentFrom.isVerified" for="field_isVerified">Is Verified</label>
+                    <input type="checkbox" class="form-control" name="isVerified" id="field_isVerified"
+                           formControlName="isVerified"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.consentFrom.verifiedBy" for="field_verifiedBy">Verified By</label>
+                    <input type="text" class="form-control" name="verifiedBy" id="field_verifiedBy"
+                           formControlName="verifiedBy"/>
+                    <div *ngIf="editForm.get('verifiedBy').invalid && (editForm.get('verifiedBy').dirty || editForm.get('verifiedBy').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('verifiedBy').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.consentFrom.verifiedTime" for="field_verifiedTime">Verified Time</label>
+                    <div class="d-flex">
+                        <input id="field_verifiedTime" type="datetime-local" class="form-control" name="verifiedTime" formControlName="verifiedTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="patientConsentApp.consentFrom.consent" for="field_consent">Consent</label>
+                    <select class="form-control" id="field_consent" name="consent" formControlName="consent">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="consentOption.id === editForm.get('consent').value?.id ? editForm.get('consent').value : consentOption" *ngFor="let consentOption of consents; trackBy: trackConsentById">{{consentOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

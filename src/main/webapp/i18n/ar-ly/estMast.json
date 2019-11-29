@@ -1,0 +1,23 @@
+{
+  "patientConsentApp": {
+    "estMast": {
+      "home": {
+        "title": "Est Masts",
+        "createLabel": "Create a new Est Mast",
+        "createOrEditLabel": "Create or edit a Est Mast",
+        "notFound": "No Est Masts found"
+      },
+      "created": "A new Est Mast is created with identifier {{ param }}",
+      "updated": "A Est Mast is updated with identifier {{ param }}",
+      "deleted": "A Est Mast is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Est Mast {{ id }}?"
+      },
+      "detail": {
+        "title": "Est Mast"
+      },
+      "estCode": "Est Code",
+      "estName": "Est Name"
+    }
+  }
+}

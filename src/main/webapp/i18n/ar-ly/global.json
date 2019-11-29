@@ -7,6 +7,19 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "الكيانات",
+        "statusMast": "Status Mast",
+        "scopeMast": "Scope Mast",
+        "categoryMast": "Category Mast",
+        "procMast": "Proc Mast",
+        "icdMast": "Icd Mast",
+        "personMast": "Person Mast",
+        "estMast": "Est Mast",
+        "patientBar": "Patient Bar",
+        "visitBar": "Visit Bar",
+        "consent": "Consent",
+        "consentProcs": "Consent Procs",
+        "consentDiag": "Consent Diag",
+        "consentFrom": "Consent From",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
